@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Rent to Read | Login / Signup</title>
+  <link rel="stylesheet" href="login/style.css">
+  <link href="img/preloader-img.png" rel="icon">
+  <link href="img/preloader-img.png" rel="apple-touch-icon">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="form-structor">
+	<div class="signup">
+		<h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+		<div class="form-holder">
+			<input type="text" class="input" placeholder="Name" id="name">
+			<input type="email" class="input" placeholder="Email" id="email">
+			<input type="password" class="input" placeholder="Password" id="password">
+		</div>
+		<a><button onclick="RegisterUser()" class="submit-btn">Sign up</button></a>
+	</div>
+	<div class="login slide-up">
+		<div class="center">
+			<h2 class="form-title" id="login"><span>or</span>Log in</h2>
+			<div class="form-holder">
+				<input type="email" class="input" placeholder="Email" id="mailid">
+				<input type="password" class="input" placeholder="Password" id="pass">
+			</div>
+			<a><button onclick="LoginUser()" class="submit-btn">Log in</button></a>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script  src="login/script.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+  <script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyC-BXVjj6QvP4Lj51TrGWJrUMk2Kt6SrIY",
+		authDomain: "rent-to-read.firebaseapp.com",
+		projectId: "rent-to-read",
+		storageBucket: "rent-to-read.appspot.com",
+		messagingSenderId: "883362980648",
+		appId: "1:883362980648:web:6043d29d318cd87bafe61d"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+
+	function LoginUser(){
+    var email=document.getElementById('mailid').value;
+    var password=document.getElementById('pass').value;
+    firebase.auth().signInWithEmailAndPassword(email,password).then(function(){
+     var id=firebase.auth().currentUser.uid;
+     localStorage.setItem('id',id);
+     window.location.replace("../landing.html");
+    }).catch(function(error){
+ 
+     var errorCode=error.code;
+     var errorMsg=error.message;
+     window.alert("Error : " +errorMsg)
+ 
+    });
+    }
+
+    function RegisterUser() {
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+		user_name = document.getElementById('name').value;
+        firebase.auth().createUserWithEmailAndPassword(email,password).then(function(){
+         var id=firebase.auth().currentUser.uid;
+		 name1 = email.substring(0, email.lastIndexOf("@"));
+		 firebase.database().ref('profile/'+name1).set({
+            Name: user_name
+          });
+         window.alert('Successfully Signup! Now Login');
+        }).catch(function(error){
+     
+         var errorcode=error.code;
+         var errormsg=error.message;
+         window.alert("Error : " +errorMsg)
+        });
+    }
+
+  </script>
+
+</body>
+</html>

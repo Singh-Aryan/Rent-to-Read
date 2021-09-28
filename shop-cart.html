@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<title>Rent to Read - Checkout</title>
+	<meta charset="utf-8">
+  <link href="img/preloader-img.png" rel="icon">
+  <link href="img/preloader-img.png" rel="apple-touch-icon">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/themeicon.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader_image pulse"></div>
+	</div>
+
+	
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="https://html.modernwebtemplates.com/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+		</div>
+	</div>
+
+	
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<header class="page_header ls s-overlay s-py-10">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-xl-2 col-lg-3 col-11">
+							<a href="index.html" class="logo">
+								<img src="images/logo.png" alt="img">
+							</a>
+						</div>
+						<div class="col-xl-8 col-lg-5 col-1">
+						
+							<nav class="top-nav">
+								<ul class="nav sf-menu">
+									<li>
+										<a href="landing.html">Home</a>
+									</li>
+                  <li>
+										<a href="#">Genres</a>
+                    <ul>
+													<li>
+														<a href="genre-thriller.html">Thriller</a>
+													</li>
+													
+													<li>
+														<a href="genre-horror.html">Horror</a>
+													</li>
+													<li>
+														<a href="genre-comedy.html">Comedy</a>
+													</li>
+													<li>
+														<a href="genre-romantic.html">Romantic</a>
+													</li>
+													
+												</ul>
+									</li>
+								</ul>
+							</nav>
+							
+						</div>
+					</div>
+				</div>
+				
+				<span class="toggle_menu"><span></span></span>
+			</header>
+
+			<section class="page_title ds s-parallax s-py-110">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12 text-center">
+							<h1 class="small-title">Shopping Cart</h1>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+    <section id="mail" class="ls ms s-py-90 s-py-xl-160">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="divider-lg-60"></div>
+							<h2 class="special-heading">
+								<span>Rent Now</span>
+							</h2>
+							<div class="divider-35"></div>
+							<div class="divider-35"></div>
+						</div>
+						<div class="col-lg-8">
+							<div class="divider-lg-0 divider-60"></div>
+							<div class="inner-wrap ls p-30 p-xl-70 border-r-def">
+								<form class="contact-form c-mb-50 c-gutter-50">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group has-placeholder">
+												<input type="text" aria-required="true" name="Name" id="Name" class="form-control" placeholder="Name">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group has-placeholder">
+												<input type="email" aria-required="true" name="Email" id="Email" class="form-control" placeholder="Email">
+											</div>
+										</div>
+									</div>
+                  
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group has-placeholder">
+												<input type="date" aria-required="true" title="From When" name="From" id="From" class="form-control" placeholder="From">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group has-placeholder">
+												<input type="date" aria-required="true" title="To When" name="To" id="To" class="form-control" placeholder="To">
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group has-placeholder">
+												<input type="text" aria-required="true" name="BookName" id="BookName" class="form-control" placeholder="Book Name">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group has-placeholder">
+												<textarea aria-required="true" rows="3" cols="55" name="Address" id="Address" class="form-control" placeholder="Address"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="wrap-forms">
+										<div class="row">
+											<div class="col-12">
+												<a type="button" onclick="submitForm()" style="border-radius: 50px; color: black" class="btn btn-maincolor">Rent Now</a>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+      
+					<footer class="page_footer ds s-py-85 s-py-xl-155">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-12 text-center animate" data-animation="fadeInUp">
+							<a href="index.html" class="logo justify-content-center">
+								<img src="images/logo-dark.png" alt="img">
+							</a>
+							<div class="divider-40"></div>
+							<div class="widget widget_nav_menu nav-in-line">
+								<ul class="menu">
+									<li class="menu-item">
+										<a href="landing.html">Home</a>
+									</li>
+									
+									<li class="menu-item">
+										<a href="genre-thriller.html">Genres</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+
+			<section class="page_copyright ls s-py-20 s-py-xl-50">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-12 text-center color-dark">
+							<p>&copy; Copyright <span class="copyright_year">2021</span> All Rights Reserved by R2R</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+	</div>
+  <script>
+    window.onload = function() {
+      var Book = localStorage.getItem("bookname");
+      document.getElementById("BookName").value = Book;
+    }
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+  <script src="js/email.js"></script>
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+  
+
+</body>
+</html>
